@@ -1,0 +1,59 @@
+@import './media.scss';
+
+.header_outer {
+    margin-bottom: 26px;
+}
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    &_bold {
+        font-weight: bold;
+    }
+    &_size {
+        font-size: 16px;
+    }
+    &_under {
+        text-decoration: underline;
+    }
+    &_mr {
+        margin-right: 24px;
+    }
+}
+.header__title {
+    font-size: 36px;
+}
+.header__basket {
+    display: flex;
+    align-items: center;
+}
+.header__subtitle {
+    &_size {
+        font-size: 16px;
+    }
+    &_mt {
+        margin-top: 8px;
+    }
+}
+.header__line {
+    display: block;
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    &_mt {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+    .header__wrapper {
+        flex-direction: column;
+    }
+    .header__title {
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+    .header__basket {
+        margin-top: 19px;
+    }
+}

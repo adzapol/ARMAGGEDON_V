@@ -1,0 +1,219 @@
+@import './media.scss';
+
+.panel__asteroids {
+    &_loading {
+        margin: 200px 0;
+        text-align: center;
+        font-size: 36px;
+        color: #FF0844;
+    }
+}
+
+.asteroid {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    min-width: 288px;
+    min-height: 200px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    &__inner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        &_bg_safe {
+            background: linear-gradient(90deg, #CFF37D 0%, #7DE88C 100%);
+        }
+        &_icon_safe {
+            position: absolute;
+            width: 71px;
+            height: 72px;
+            left: 122px;
+            top: 28px;
+        }
+        &_icon_safe_big {
+            position: absolute;
+            width: 186px;
+            height: 110px;
+            left: 72px;
+            top: 0;
+        }
+        &_bg_danger {
+            background: linear-gradient(90deg, #FFB199 0%, #FF0844 100%);
+        }
+        &_icon_danger {
+            position: absolute;
+            width: 499px; 
+            height: 119px;
+            left: 0;
+            top: 0;
+        }
+    }
+    &__dino {
+        position: absolute;
+        width: 56px;
+        height: 48px;
+        left: 16px;
+        bottom: 0px;
+    }
+    &_mb {
+        margin-bottom: 16px;
+    }
+    &__info {
+        line-height: 24px;
+        min-width: 310px;
+        z-index: 2;
+        &_position {
+            margin-top: 24px;
+            margin-bottom: 40px;
+        }
+        &_pr {
+            padding-right: 11%;
+        }
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+        &_under {
+            text-decoration: underline;
+        }
+    }
+    &__date {
+        width: 289px;
+        &_mt {
+            margin-top: 16px;
+        }
+    }
+    &__distance {
+        width: 289px;
+        &_mt {
+            margin-top: 8px;
+        }
+    }
+    &__sizing {
+        width: 289px;
+        &_mt {
+            margin-top: 8px;
+        }
+    }
+
+    &__point {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        z-index: 2;
+        &_mr {
+            margin-right: 24px;
+        }
+    }
+    &__warning {
+        font-weight: 700;
+        &_mt {
+            margin-top: 6px;
+        }
+    }
+    &__button {
+        height: 48px;
+        padding: 10px 16px;
+        background-color: #186DD6;
+        color: #fff;
+        border-radius: 24px;
+        border: 0;
+        outline: none;
+        &_mt {
+            margin-top: 8px;
+        }
+    }
+}
+@media (max-width: $screen-md) {
+    .panel__asteroids {
+        &_loading {
+            margin: 50px 0;
+        }
+    }
+    .asteroid {
+        flex-direction: column;
+        justify-content: center;
+        align-items: initial;
+        &_fs {
+            font-size: 14px;
+        }
+        &__inner {
+            height: 145px;
+            &_icon_safe {
+                position: absolute;
+                width: 61px;
+                height: 62px;
+                left: 27px;
+                top: 22px;
+            }
+            &_icon_safe_big {
+                width: 108px;
+                height: 84px;
+                left: 27px;
+                top: 0;
+            }
+            &_icon_danger {
+                width: 288px; 
+                height: 68px;
+            }
+        }
+        &__dino {
+            position: absolute;
+            width: 35px;
+            height: 30px;
+            bottom: 0px;
+            left: 85%;
+            right: 8px;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+        &__date {
+            width: 100%;
+            &_mt {
+                margin-top: 24px;
+            }
+        }
+        &__distance {
+            width: 100%;
+        }
+        &__sizing {
+            width: 100%;
+            &_mt {
+                margin-top: 16px;
+            }
+        }
+        &__title {
+            font-size: 16px;
+        }
+        &__info {
+            margin-top: 115px;
+            max-width: 100%;
+            min-width: 200px;
+            padding-left: 16px;
+            &_pr {
+                padding-right: 16px;
+            }
+            &_position {
+                margin-bottom: 0;
+            }
+        }
+        &__point {
+            margin-top: 16px;
+            margin-bottom: 25px;
+            &_mr {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+

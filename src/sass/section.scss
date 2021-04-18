@@ -1,0 +1,45 @@
+@import './media.scss';
+
+.panel_outer {
+    margin-top: 26px;
+}
+.panel_sorting {
+    display: flex;
+    justify-content: space-between;
+}
+.sorting {
+    &_mb {
+        margin-bottom: 24px;
+    }
+    &__input {
+        &_mr {
+            margin-right: 10px;
+        }
+    }
+    &__range {
+        cursor: pointer;
+        font-weight: 700;
+        &_under {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+    .panel_sorting {
+        flex-direction: column;
+    }
+    .sorting__range_mt {
+        margin-top: 16px;
+    }
+    .sorting {
+        &_mb {
+            margin-bottom: 16px;
+        }
+        &__range {
+            &_under {
+                line-height: 24px;
+            }
+        }
+    }
+}
